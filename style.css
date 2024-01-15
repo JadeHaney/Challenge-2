@@ -213,12 +213,34 @@ body {
 }
 
 .carousel img {
-  width: 400px;
-  height: 250px;
+  width: 1270px; /* Set the width of the first image to be twice as large */
+  height: 820px; /* Set the height accordingly */
   object-fit: cover;
   margin-top: 10px;
   border-radius: 25px;
   display: block;
+}
+
+/* Adjust the size of the other images as needed */
+.carousel + .carousel img {
+  width: 400px;
+  height: 250px;
+}
+
+/* Medium screens */
+@media (max-width: 1200px) {
+  .carousel img {
+    width: 800px; /* Adjust the width for medium screens */
+    height: 500px; /* Adjust the height accordingly */
+  }
+}
+
+/* Small screens */
+@media (max-width: 768px) {
+  .carousel img {
+    width: 400px; /* Adjust the width for small screens */
+    height: 250px; /* Adjust the height accordingly */
+  }
 }
 
 .carousel:hover .image-overlay::before {
